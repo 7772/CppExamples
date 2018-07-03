@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "__functional_base": "cpp",
+        "typeinfo": "cpp",
+        "__locale": "cpp",
+        "locale": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "ratio": "cpp"
+    }
+}
