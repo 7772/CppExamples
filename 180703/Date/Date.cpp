@@ -20,6 +20,20 @@ class Date {
         void add_month(int inc);
         void add_year(int inc);
         void get_date();
+
+    Date() {
+        year = 2018;
+        month = 1;
+        day = 1;
+        max_day = DAY_LIST[month - 1];
+    };
+
+    Date(int _year, int _month, int _day) {
+        year = _year;
+        month = _month;
+        day = _day;
+        max_day = DAY_LIST[month - 1];
+    };
 };
 
 /**
@@ -75,12 +89,14 @@ void Date::get_date() {
 int main(int argc, char * argv[]) {
     Date date;
 
-    int year = atoi(argv[1]);
-    int month = atoi(argv[2]);
-    int day = atoi(argv[3]);
+    if ( argc > 1 ) {
+        int year = atoi(argv[1]);
+        int month = atoi(argv[2]);
+        int day = atoi(argv[3]);
+    }
 
 
-    date.set_date(year, month, day);
+    // date.set_date(year, month, day);
     date.get_date();
     date.add_day(300);
     date.get_date();
