@@ -21,6 +21,9 @@ class Date {
         void add_year(int inc);
         void get_date();
 
+    /**
+     * @ Overloading constructor
+     */
     Date() {
         year = 2018;
         month = 1;
@@ -37,7 +40,6 @@ class Date {
 };
 
 /**
- * @ Overloading Date Class
  * @ Date::function_name
  */
 
@@ -87,7 +89,8 @@ void Date::get_date() {
 }
 
 int main(int argc, char * argv[]) {
-    Date date;
+    Date date;                          // implicit
+    Date date2 = Date(2017, 1, 1);      // explicit
 
     if ( argc > 1 ) {
         int year = atoi(argv[1]);
@@ -100,6 +103,10 @@ int main(int argc, char * argv[]) {
     date.get_date();
     date.add_day(300);
     date.get_date();
+
+    date2.get_date();
+    date2.add_year(1);
+    date2.get_date();
 
 
     return 0;
