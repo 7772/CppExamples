@@ -56,17 +56,22 @@ void Marine::show_status() {
 }
 
 int main() {
-    Marine marine1 (2, 3);
-    Marine marine2 (3, 5);
+    Marine * marines[100];
 
-    marine1.show_status();
-    marine2.show_status();
+    marines[0] = new Marine(2, 3);
+    marines[1] = new Marine(3, 5);
 
-    cout << endl << "마린 1 이 마린 2 를 공격! " << endl;
-    marine2.be_attacked(marine1.attack());
+    marines[0]->show_status();
+    marines[1]->show_status();
 
-    marine1.show_status();
-    marine2.show_status();
+    cout << endl << "Marine 0 attacks Marine 1" << endl;
+    marines[1]->be_attacked(marines[0]->attack());
+
+    marines[0]->show_status();
+    marines[1]->show_status();
+
+    delete marines[0];
+    delete marines[1];
 
     return 0;
 }
