@@ -2,6 +2,7 @@
  * Marine.cpp
  * @author  Landon Park
  * @date    2018. 07. 05 
+ * @source  http://itguru.tistory.com/
  */
 #include <iostream>
 #include <string.h>
