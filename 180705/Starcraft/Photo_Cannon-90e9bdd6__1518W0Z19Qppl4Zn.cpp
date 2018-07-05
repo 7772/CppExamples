@@ -17,7 +17,7 @@ class Photo_Cannon {
     public: 
         Photo_Cannon(int x, int y);
         Photo_Cannon(int x, int y, const char * cannon_name);
-        Photo_Cannon(const Photo_Cannon & pc);  // copy constructor
+        // Photo_Cannon(const Photo_Cannon & pc);  // copy constructor
         ~Photo_Cannon();
 
         void show_status();
@@ -32,14 +32,14 @@ Photo_Cannon::Photo_Cannon(int x, int y) {
     name = NULL;
 }
 
-Photo_Cannon::Photo_Cannon(const Photo_Cannon & pc) {
-    cout << "Call Copy Constructor" << endl;
-    hp = pc.hp;
-    shield = pc.shield;
-    coord_x = pc.coord_x;
-    coord_y = pc.coord_y;
-    damage = pc.damage;
-}
+// Photo_Cannon::Photo_Cannon(const Photo_Cannon & pc) {
+//     cout << "Call Copy Constructor" << endl;
+//     hp = pc.hp;
+//     shield = pc.shield;
+//     coord_x = pc.coord_x;
+//     coord_y = pc.coord_y;
+//     damage = pc.damage;
+// }
 
 Photo_Cannon::Photo_Cannon(int x, int y, const char * cannon_name) {
     cout << "Call Constructor" << endl;
@@ -76,8 +76,8 @@ int main() {
     Photo_Cannon pc1 (3, 3, "Cannon");
     Photo_Cannon pc2 = pc1;
 
-    pc1.show_status();
-    pc2.show_status();
+    // pc1.show_status();
+    // pc2.show_status();
 
     return 0;
 }
