@@ -1,3 +1,8 @@
+/**
+ * Marine.cpp
+ * @author  Landon Park
+ * @date    2018. 07. 05 
+ */
 #include <iostream>
 #include <string.h>
 
