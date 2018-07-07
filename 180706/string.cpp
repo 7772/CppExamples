@@ -1,5 +1,5 @@
 /**
- * Photo_Cannon.cpp
+ * String.cpp
  * @author  Landon Park
  * @date    2018. 07. 06
  * @source  http://itguru.tistory.com/
